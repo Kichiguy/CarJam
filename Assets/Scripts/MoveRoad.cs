@@ -4,18 +4,19 @@ using UnityEngine;
 
 public class MoveRoad : MonoBehaviour
 {
-    public float speed;
-    public PlayerController player;
-    void Start()
+    private PlayerController player;
+    private RoadSpawner spawner;
+    void Awake()
     {
-        
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+        spawner = GameObject.FindGameObjectWithTag("GameController").GetComponent<RoadSpawner>();
     }
 
     void Update()
     {
         if(!player.paused) {
             //TODO: change this to allow for directional changes
-            transform.Translate(Vector3.back * Time.deltaTime * speed);
+            transform.Translate(Vector3.back * Time.deltaTime * spawner.roadSpeed);
         }
     }
 }
