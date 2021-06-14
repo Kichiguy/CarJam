@@ -11,6 +11,7 @@ public class RoadSpawner : MonoBehaviour
     private Vector3 startPos;
     private Vector3 spawnPos;
     private float repeatWidth;
+    private MoveRoad oldRoad;
     void Start()
     {
         startPos = currentRoad.transform.position;
@@ -23,21 +24,22 @@ public class RoadSpawner : MonoBehaviour
         if(currentRoad.transform.position.z < startPos.z - repeatWidth) {
             SpawnRoad();
         }
-        /*if(currentRoad.transform.position.z < -currentRoad.GetComponent<BoxCollider>().size.z) {
-            DestroyCurrentRoad();
+        if(currentRoad.transform.position.z < -currentRoad.GetComponent<BoxCollider>().size.z) {
             SetNewCurrentRoad();
-        }*/
+            DestroyOldRoad();
+        }
     }
 
     void SpawnRoad() {
         Instantiate(straightRoad, spawnPos, currentRoad.transform.rotation);
     }
 
-    void DestroyCurrentRoad() {
-        Destroy(currentRoad);
+    void DestroyOldRoad() {
+        Destroy(oldRoad.gameObject);
     }
 
     void SetNewCurrentRoad() {
-        currentRoad = GameObject.FindGameObjectWithTag("Road").GetComponent<MoveRoad>();
+        oldRoad = currentRoad;
+        currentRoad = GameObject.FindGameObjectsWithTag("Road")[1].GetComponent<MoveRoad>();
     }
 }
