@@ -1556,8 +1556,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1326002382}
+  - component: {fileID: 1326002383}
   m_Layer: 0
-  m_Name: Road Segment
+  m_Name: Straight Road Segment
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1582,6 +1583,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1326002383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1326002381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 018326844ed79c94da59a22e0589bdeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  player: {fileID: 498812718}
 --- !u!1001 &1333682744
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2115,7 +2130,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100008, guid: 85abc66ee2c921c4f94d78ff0bae4348, type: 3}
       propertyPath: m_Name
-      value: sedanpref
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 400008, guid: 85abc66ee2c921c4f94d78ff0bae4348, type: 3}
       propertyPath: m_LocalPosition.x
