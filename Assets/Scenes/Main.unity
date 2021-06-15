@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -871,18 +871,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1326002383 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8445220639339883486, guid: 779d442c73d7b2e49998c475c644525c,
-    type: 3}
-  m_PrefabInstance: {fileID: 8445220638484830993}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 018326844ed79c94da59a22e0589bdeb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1429240568
 GameObject:
   m_ObjectHideFlags: 0
@@ -989,10 +977,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5847baa6d1f87b4f85a4ef9d1cb7a22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentRoad: {fileID: 1326002383}
   straightRoad: {fileID: 8445220639339883484, guid: 779d442c73d7b2e49998c475c644525c,
     type: 3}
-  roadSpeed: 30
+  player: {fileID: 498812718}
+  roadSpeed: 120
 --- !u!4 &1919975187
 Transform:
   m_ObjectHideFlags: 0
@@ -1001,11 +989,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1919975185}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 7, y: 0, z: 120}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1985137260
 PrefabInstance:
@@ -1155,72 +1143,3 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2010761254}
   m_CullTransparentMesh: 0
---- !u!1001 &8445220638484830993
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 8445220639339883484, guid: 779d442c73d7b2e49998c475c644525c,
-        type: 3}
-      propertyPath: m_Name
-      value: Straight Road Segment
-      objectReference: {fileID: 0}
-    - target: {fileID: 8445220639339883487, guid: 779d442c73d7b2e49998c475c644525c,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 8445220639339883487, guid: 779d442c73d7b2e49998c475c644525c,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8445220639339883487, guid: 779d442c73d7b2e49998c475c644525c,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8445220639339883487, guid: 779d442c73d7b2e49998c475c644525c,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8445220639339883487, guid: 779d442c73d7b2e49998c475c644525c,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8445220639339883487, guid: 779d442c73d7b2e49998c475c644525c,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8445220639339883487, guid: 779d442c73d7b2e49998c475c644525c,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8445220639339883487, guid: 779d442c73d7b2e49998c475c644525c,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8445220639339883487, guid: 779d442c73d7b2e49998c475c644525c,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8445220639339883487, guid: 779d442c73d7b2e49998c475c644525c,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8445220639339883487, guid: 779d442c73d7b2e49998c475c644525c,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 779d442c73d7b2e49998c475c644525c, type: 3}
